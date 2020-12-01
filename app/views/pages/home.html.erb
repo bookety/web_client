@@ -1,1 +1,8 @@
 
+<div class="row d-flex">
+    <% @rooms.each do |room| %>
+        <div class="col-12 col-md-3">
+            <%= link_to room.room_name, room_path(room)%>
+        </div>
+    <% end %>
+</div>
