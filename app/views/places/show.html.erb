@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+    <h1>
+        <p><%= @place.fantasy_name %></p>  
+    </h1>
+    
+</div>
+
+<% unless @rooms.nil? %>
+    <% @rooms.each do |room| %>
+        <p><%= room.room_name %></p>
+    <% end %>
+<% end %>
+
+<%= link_to 'Add a Room', new_place_room_path(@place), class: 'btn btn-primary' %>
+<%= link_to 'Edit Place', edit_place_path(@place), class: 'btn btn-secondary' %>
+<%= link_to 'Delete Place', place_path(@place), method: :delete, class: 'btn btn-warning', data: { confirm: "Are you sure?" } %>

@@ -1,8 +1,11 @@
 
 <div class="row d-flex">
-    <% @rooms.each do |room| %>
+    <% @places.each do |place| %>
         <div class="col-12 col-md-3">
-            <%= link_to room.room_name, room_path(room)%>
+            <%= link_to place.fantasy_name, place_path(place)%>
         </div>
     <% end %>
+</div>
+<div class="row d-flex justify-content-end">
+    <%= link_to 'Add a Place', new_place_path, class: 'btn btn-primary' %>
 </div>
