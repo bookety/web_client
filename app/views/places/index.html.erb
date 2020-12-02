@@ -1,0 +1,6 @@
+<% @places.each do |place| %>
+    <p><%= link_to place.fantasy_name, place_path(place) %></p>
+    <% place.rooms do |room| %>
+        <p><%= room.room_name %></p>
+    <% end %>
+<% end %>
